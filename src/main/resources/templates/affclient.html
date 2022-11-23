@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Infos Client</title>
+</head>
+<body>
+<table border="1">
+  <th>ID</th>
+  <th>NOM</th>
+  <th>PRENOM</th>
+  <th>TELEPHONE</th>
+  <tr>
+    <td th:text="${moncli.idclient}"/>
+    <td th:text="${moncli.nom}"/>
+    <td th:text="${moncli.prenom}"/>
+    <td th:text="${moncli.tel}"/>
+  </tr>
+</table>
+
+<table border="1">
+  <th>NUM COMMANDE</th>
+  <th>NUM FACTURE</th>
+  <th>DATE COMMANDE</th>
+  <th>ETAT</th>
+  <th>MONTANT</th>
+  <!--<tr th:each="comfact : ${moncli.facturesNonPayees()}">-->
+  <tr th:each="comfact : ${moncli.comfacts}">
+    <td th:text="${comfact.numcommande}"/>
+    <td th:text="${comfact.numfact}"/>
+    <td th:text="${comfact.datecom}"/>
+    <td th:text="${comfact.etat}"/>
+    <td th:text="${comfact.montant}"/>
+  </tr>
+</table>
+<a href ="/">retour</a>
+</body>
+</html>

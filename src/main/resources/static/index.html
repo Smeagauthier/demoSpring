@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ACCUEIL</title>
+</head>
+<body>
+  <h1>Bienvenue dans le spring boot</h1>
+
+  <h2>CLIENTS</h2>
+
+  <p><a href="clients/tous">voir tous les clients</a></p>
+  <p><form action = "clients/create" method="get">
+      nom : <input type = "text" name="nom"> <br>
+      prenom : <input type = "text" name="prenom"> <br>
+      tel : <input type = "text" name="tel"> <br>
+      <input type="submit" name="ok" value="ok">
+  </form>
+  </p>
+
+  <p><form action = "clients/read" method="get">
+      ID client: <input type = "text" name="idclient"> <br>
+      <input type="submit" name="ok" value="ok">
+  </form>
+  </p>
+
+  <h2>COMMANDE</h2>
+
+  <p><form action = "comfacts/rechparcli" method="get">
+      ID client: <input type = "text" name="idclient"> <br>
+      <input type="submit" name="ok" value="ok">
+  </form>
+  </p>
+</body>
+</html>
